@@ -5,29 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoCADLIGUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Icon="Resources/StandardsFileIcon.ico"
+        Title="AutoCAD List Tools" Height="450" Width="800">
 
     <Grid>
+        <!--Grid Definitions-->
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="46"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="603*"/>
-            <ColumnDefinition Width="190*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="190"/>
         </Grid.ColumnDefinitions>
 
         <!--Text box where data is to be entered-->
-        <TextBox 
+        <TextBox
+            x:Name="MainTextBox"
             Margin="10,10,10,10" 
             TextWrapping="Wrap"
             AcceptsReturn="True"
+            VerticalScrollBarVisibility="Auto"
+            HorizontalScrollBarVisibility="Auto"
             Grid.Column="0" Grid.Row="0"/>
 
         <!--Stack Panel for all options and controls-->
         <StackPanel 
             Grid.Row="0" Grid.Column="1" 
-            Margin="10,14,0,10" 
+            Margin="1,14,1,10" 
             Orientation="Vertical" 
             CanVerticallyScroll="True">
 
@@ -56,18 +61,25 @@
 
             <!--Blocks Checkbox-->
             <CheckBox
-                Name="BlocksCheckBox"
+                x:Name="BlocksCheckBox"
                 Content="Blocks"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
+                Checked="BlocksCheckBox_OnChecked"
+                Unchecked="BlocksCheckBox_OnUnchecked"
                 ></CheckBox>
 
         </StackPanel>
-        <Button 
+
+        <!--Extract Button-->
+        <Button
+            Name="ExtractionButton"
+            Click="ExtractionButton_OnClick"
             Content="ExtractData" 
             Margin="0,10.333,10.333,15.667" 
             Grid.Row="1" 
             Grid.Column="0" HorizontalAlignment="Right" Width="75"/>
+
 
 
 
