@@ -15,13 +15,6 @@ namespace AutoCADLIGUI
     public partial class App : Application
     {
 
-        // TODO: Implement Regular Expressions
-
-        public static void ParseLiText()
-        {
-            // TODO: Implement the Parsing functions
-        }
-
     }
 
 }

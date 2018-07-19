@@ -1,0 +1,14 @@
+﻿Command: li LIST
+Select objects: 1 found
+
+Select objects:
+                  LWPOLYLINE  Layer: "0"
+                            Space: Model space
+                   Handle = 202
+              Open
+    Constant width    0.0000
+              area   0.0000
+            length   13.3519
+
+          at point  X=  14.7704  Y=  10.9499  Z=   0.0000
+          at point  X=  27.8926  Y=  13.4160  Z=   0.0000

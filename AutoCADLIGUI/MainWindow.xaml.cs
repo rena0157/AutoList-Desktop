@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -21,14 +22,18 @@ namespace AutoCADLIGUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Regex LwPolylineRegex;
+
+
         public MainWindow()
         {
+            LwPolylineRegex = new Regex(@"length\s*\d*\.\d{1-4}");
             InitializeComponent();
         }
 
         private void ExtractionButton_OnClick(object sender, RoutedEventArgs e)
         {
-            App.ParseLiText();
+            ParseLiText();
         }
 
         // When the Blocks Check box is checked check the polylines and hatches
@@ -57,7 +62,13 @@ namespace AutoCADLIGUI
             HatchesCheckBox.IsEnabled = true;
         }
 
- 
+        private void ParseLiText()
+        {
+            var lines = MainTextBox.Text.Split(
+                new[] {Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries);
+
+        }
+
     }
 
 }
