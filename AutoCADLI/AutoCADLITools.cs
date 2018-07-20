@@ -10,8 +10,7 @@ namespace AutoCADLI
         // Regex presets
         private static readonly Regex PolylineRegex = new Regex(@"length\s*\d*\.\d*");
         private static readonly Regex LineRegex = new Regex(@"Length\s*=\s*\d*\.\d*");
-        private static readonly Regex HatchRegex = new Regex(@"^\s*Area\s*\d*\.\d*",
-            RegexOptions.IgnoreCase);
+        private static readonly Regex HatchRegex = new Regex(@"^\s*Area\s*\d*\.\d*");
 
         /// <summary>
         /// Method used to extract objects from a string list which is based on the

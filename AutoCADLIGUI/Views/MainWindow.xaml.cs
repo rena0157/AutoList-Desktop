@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Windows;
-using AutoCADLI;
+using System.Windows.Input;
 using AutoCADLIGUI.Models;
 
 namespace AutoCADLIGUI
@@ -16,9 +15,6 @@ namespace AutoCADLIGUI
         {
             InitializeComponent();
         }
-
-
-
     }
 
 }

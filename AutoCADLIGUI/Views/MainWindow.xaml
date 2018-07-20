@@ -8,6 +8,7 @@
         mc:Ignorable="d"
         Icon="/Resources/StandardsFileIcon.ico"
         Title="AutoCAD List Tools" Height="450" Width="800"
+        FontFamily="Century Gothic"
         >
     <Window.DataContext>
         <viewModels:MainPageViewModel>
@@ -29,18 +30,19 @@
         <!--Text box where data is to be entered-->
         <TextBox
             x:Name="MainTextBox"
-            Margin="10,10,10,10" 
+            Margin="10,10,4.333,9.667" 
             TextWrapping="Wrap"
             AcceptsReturn="True"
             Text="{Binding Text, Mode=TwoWay}"
             VerticalScrollBarVisibility="Auto"
             HorizontalScrollBarVisibility="Auto"
-            Grid.Column="0" Grid.Row="0"/>
+            Grid.Column="0" Grid.Row="0" 
+            />
 
         <!--Stack Panel for all options and controls-->
-        <StackPanel 
+        <StackPanel x:Name="ExtractionOptionsStack" 
             Grid.Row="0" Grid.Column="1" 
-            Margin="1,14,1,10" 
+            Margin="0.667,10,1.333,9.667" 
             Orientation="Vertical" 
             CanVerticallyScroll="True">
 
@@ -56,6 +58,7 @@
                 Name="PolylinesCheckBox"
                 Content="Lines and Polylines"
                 IsChecked="{Binding ExtractPolylinesAndLines, Mode=TwoWay}"
+                FontFamily="Century Gothic"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top">
             </CheckBox>
@@ -72,7 +75,7 @@
             <!--Blocks Checkbox-->
             <CheckBox
                 x:Name="BlocksCheckBox"
-                Content="Blocks"
+                Content="Output Blocks to a file"
                 IsChecked="{Binding ExtractBlocks, Mode=TwoWay}"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
@@ -84,10 +87,10 @@
         <Button
             Name="ExtractionButton"
             Content="ExtractData" 
-            Margin="0,10.333,10.333,15.667"
+            Margin="0,5.333,10.333,9.667"
             Command="{Binding ExtractDataCommand}"
             Grid.Row="1" 
-            Grid.Column="0" HorizontalAlignment="Right" Width="75"/>
+            Grid.Column="0" HorizontalAlignment="Right" Width="138"/>
 
     </Grid>
 </Window>

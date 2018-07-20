@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using AutoCADLI;
+using Microsoft.Win32;
 
 namespace AutoCADLIGUI.Models
 {
@@ -15,6 +18,28 @@ namespace AutoCADLIGUI.Models
     /// </summary>
     public class ExtractionResults
     {
+
+
+        /// <summary>
+        /// All of the lines and polylines lengths
+        /// </summary>
+        public List<double> PolyLinesLines { get; }
+        
+        /// <summary>
+        /// All of the Hatches areas in meters squared
+        /// </summary>
+        public List<double> Hatches { get; }
+        
+        /// <summary>
+        /// The total Length of all Hatches
+        /// </summary>
+        public double TotalLength { get; }
+
+        /// <summary>
+        /// The Total Area of all Hatches
+        /// </summary>
+        public double TotalArea { get; }
+
         /// <summary>
         /// Extraction results object constructor that
         /// Contains all of the properties of Polylines, Lines and Hatches
@@ -40,25 +65,66 @@ namespace AutoCADLIGUI.Models
             TotalArea = MathTools.Convert(Hatches.Sum(), Conversions.M2Ha);
         }
 
+        /// <summary>
+        /// Writes the blocks information to a CSV file
+        /// </summary>
+        /// <returns>If the write was successful or not</returns>
+        public bool OutputBlocksToCsv()
+        {
+            var sfDialog = new SaveFileDialog
+            {
+                AddExtension = true,
+                CheckPathExists = true,
+                OverwritePrompt = true,
+                Filter = "Comma Separated CSV|*.csv",
+                Title = "Save CSV File"
+            };
+            sfDialog.ShowDialog();
 
-        /// <summary>
-        /// All of the lines and polylines lengths
-        /// </summary>
-        public List<double> PolyLinesLines { get; }
-        
-        /// <summary>
-        /// All of the Hatches areas in meters squared
-        /// </summary>
-        public List<double> Hatches { get; }
-        
-        /// <summary>
-        /// The total Length of all Hatches
-        /// </summary>
-        public double TotalLength { get; }
+            // The string builder that will hold all of the information
+            // that will be written to the CSV file
+            var stringBuilder = new StringBuilder();
 
-        /// <summary>
-        /// The Total Area of all Hatches
-        /// </summary>
-        public double TotalArea { get; }
+            // Adding the headers to the CSV file
+            stringBuilder.AppendLine("Block Number,Polyline/Line Length, Hatch Area");
+
+            // Appending to the string builder
+            for (var lineIndex = 0; lineIndex < Math.Max(PolyLinesLines.Count, Hatches.Count); ++lineIndex)
+            {
+
+                if (lineIndex >= PolyLinesLines.Count)
+                    stringBuilder.AppendLine($"{lineIndex + 1},"
+                                                + $","
+                                                + $"{Hatches[lineIndex]}");
+                else if (lineIndex >= Hatches.Count)
+                    stringBuilder.AppendLine($"{lineIndex + 1}," +
+                                             $"{PolyLinesLines[lineIndex]}," +
+                                             $"");
+                else
+                    stringBuilder.AppendLine($"{lineIndex + 1}," +
+                                             $"{PolyLinesLines[lineIndex]}," +
+                                             $"{Hatches[lineIndex]}");
+            }
+
+            // Write to file and handel any writing exceptions
+            try
+            {
+                File.WriteAllText(sfDialog.FileName, stringBuilder.ToString());
+            }
+            catch (System.IO.IOException e)
+            {
+                MessageBox.Show("Error: " + e.Message, "Save as Error", MessageBoxButton.OK,
+                    MessageBoxImage.Warning);
+                return false;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error while writing file: " + e.Message,
+                    "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
+            }
+
+            return true;
+        }
     }
 }

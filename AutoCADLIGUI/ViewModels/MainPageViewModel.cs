@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Globalization;
 using System.Windows;
 using System.Windows.Input;
 using AutoCADLIGUI.Framework;
@@ -14,9 +8,6 @@ namespace AutoCADLIGUI.ViewModels
 {
     public class MainPageViewModel : ObservableObject
     {
-        // Extraction Results from the AutoCAD LI Tools toolkit
-        private ExtractionResults _extractionResults;
-
         // Text string that is binded to the textbox
         private string _text;
 
@@ -84,10 +75,12 @@ namespace AutoCADLIGUI.ViewModels
         /// </summary>
         public ICommand ExtractDataCommand => new DelegateCommand(ExtractData);
 
-        // Executes the Extract Data command
+        /// <summary>
+        /// Runs all of the back end required to extract the data from the string
+        /// </summary>
         private void ExtractData()
         {
-            // Error handling
+            // Error handling - No string to parse
             if (Text == null)
             {
                 MessageBox.Show("The text box is empty. Please place something in" +
@@ -97,6 +90,7 @@ namespace AutoCADLIGUI.ViewModels
                 return;
             }
 
+            // Error handling - Nothing selected
             if (!ExtractBlocks && !ExtractHatches && !ExtractPolylinesAndLines)
             {
                 MessageBox.Show("You have not selected anything to be extracted. Please " +
@@ -114,26 +108,37 @@ namespace AutoCADLIGUI.ViewModels
                 = extractionResults.PolyLinesLines.Count + extractionResults.Hatches.Count;
 
             // The base string that is to be printed to the user
-            string baseString = $"Total Objects Extracted: {totalObjectsExtracted}\n" +
-                                $"Lines and Polylines: {extractionResults.PolyLinesLines.Count}\n" +
-                                $"Hatches: {extractionResults.Hatches.Count}\n\n";
+            var baseString = $"Total Objects Extracted: {totalObjectsExtracted}\n" +
+                             $"Lines and Polylines: {extractionResults.PolyLinesLines.Count}\n" +
+                             $"Hatches: {extractionResults.Hatches.Count}\n\n";
+
+            // Blocks
             if (ExtractBlocks)
             {
+                if (extractionResults.OutputBlocksToCsv())
+                    Text = "Extraction Successful";
 
             }
+
+            // Polylines, Lines and Hatches
             else if (ExtractPolylinesAndLines && ExtractHatches)
             {
                 Text = baseString + $"Total Length: {extractionResults.TotalLength}m\n" +
                         $"Total Area: {extractionResults.TotalArea} ha\n";
             }
+
+            // Polylines and Lines - Copies the total length to the clipboard
             else if (ExtractPolylinesAndLines && !ExtractHatches)
             {
                 Text = baseString + $"Total Length:  {extractionResults.TotalLength}m\n";
                 Clipboard.SetText(extractionResults.TotalLength.ToString(CultureInfo.CurrentCulture));
             }
+
+            // Hatches - Copies the total length to the clipboard
             else if (!ExtractPolylinesAndLines && ExtractHatches)
             {
-                
+                Text = baseString + $"Total Area: {extractionResults.TotalArea}ha\n";
+                Clipboard.SetText(extractionResults.TotalArea.ToString(CultureInfo.CurrentCulture));
             }
         }
     }
