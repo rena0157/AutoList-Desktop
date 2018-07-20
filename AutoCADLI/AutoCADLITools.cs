@@ -13,18 +13,20 @@ namespace AutoCADLI
         private static readonly Regex HatchRegex = new Regex(@"^\s*Area\s*\d*\.\d*");
 
         /// <summary>
-        /// Method used to extract objects from a string list which is based on the
-        /// output of an AutoCAD List command
+        ///     Method used to extract objects from a string list which is based on the
+        ///     output of an AutoCAD List command
         /// </summary>
         /// <remarks>
-        /// Note that the properties that are extracted from the object are as follows:
-        /// From Polylines and lines lengths are extracted,
-        /// From Hatches areas are extracted,
-        /// From blocks polylines, lines and hatches are all extracted and placed into groups
-        /// for the exporting to a CSV file.
+        ///     Note that the properties that are extracted from the object are as follows:
+        ///     From Polylines and lines lengths are extracted,
+        ///     From Hatches areas are extracted,
+        ///     From blocks polylines, lines and hatches are all extracted and placed into groups
+        ///     for the exporting to a CSV file.
         /// </remarks>
-        /// <param name="textList">The AutoCAD List command text broken up into
-        /// a string list</param>
+        /// <param name="textList">
+        ///     The AutoCAD List command text broken up into
+        ///     a string list
+        /// </param>
         /// <param name="obj">The objects that you would like to extract</param>
         /// <returns>a list of lengths for lines or a list of areas for hatches</returns>
         public static List<double> ExtractObjects(IEnumerable<string> textList,
@@ -41,19 +43,19 @@ namespace AutoCADLI
                     // matches a regex and then parse that line. When the line is parsed
                     // then place the property into a list 
                     foreach (var thisLine in textList)
-                    {
                         if (PolylineRegex.IsMatch(thisLine))
-                            returnList.Add( double.Parse( ParsePolylineText(thisLine) ) );
+                            returnList.Add(double.Parse(ParsePolylineText(thisLine)));
                         else if (LineRegex.IsMatch(thisLine))
-                            returnList.Add( double.Parse( ParseLineText(thisLine) ) );
-                    }
-                }break;
+                            returnList.Add(double.Parse(ParseLineText(thisLine)));
+                }
+                    break;
 
                 case ExtractionObject.Hatches:
                     // Parses the line and converts it to a double, then adds it to 
                     // the return list
                     returnList.AddRange(
-                        from thisLine in textList where HatchRegex.IsMatch(thisLine) 
+                        from thisLine in textList
+                        where HatchRegex.IsMatch(thisLine)
                         select double.Parse(ParseHatchText(thisLine)));
                     break;
                 default:
@@ -64,8 +66,8 @@ namespace AutoCADLI
         }
 
         /// <summary>
-        /// This function is used to take a single string of text and separate it
-        /// by newlines and return an array of strings. 
+        ///     This function is used to take a single string of text and separate it
+        ///     by newlines and return an array of strings.
         /// </summary>
         /// <param name="inputText"></param>
         /// <returns></returns>
@@ -96,11 +98,11 @@ namespace AutoCADLI
     }
 
     /// <summary>
-    /// All of the object that can be extracted from the LI text box
+    ///     All of the object that can be extracted from the LI text box
     /// </summary>
     public enum ExtractionObject
     {
         PolylinesAndLines,
-        Hatches,
+        Hatches
     }
 }

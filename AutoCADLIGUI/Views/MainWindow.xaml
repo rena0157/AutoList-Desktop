@@ -3,55 +3,51 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AutoCADLIGUI"
         xmlns:viewModels="clr-namespace:AutoCADLIGUI.ViewModels"
         mc:Ignorable="d"
         Icon="/Resources/StandardsFileIcon.ico"
         Title="AutoCAD List Tools" Height="450" Width="800"
-        FontFamily="Century Gothic"
-        >
+        FontFamily="Century Gothic">
     <Window.DataContext>
-        <viewModels:MainPageViewModel>
-        </viewModels:MainPageViewModel>
+        <viewModels:MainPageViewModel />
     </Window.DataContext>
-    
+
 
     <Grid>
         <!--Grid Definitions-->
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="46"/>
+            <RowDefinition />
+            <RowDefinition Height="46" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="190"/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="190" />
         </Grid.ColumnDefinitions>
 
         <!--Text box where data is to be entered-->
         <TextBox
             x:Name="MainTextBox"
-            Margin="10,10,4.333,9.667" 
+            Margin="10,10,4.333,9.667"
             TextWrapping="Wrap"
             AcceptsReturn="True"
             Text="{Binding Text, Mode=TwoWay}"
             VerticalScrollBarVisibility="Auto"
             HorizontalScrollBarVisibility="Auto"
-            Grid.Column="0" Grid.Row="0" 
-            />
+            Grid.Column="0" Grid.Row="0" />
 
         <!--Stack Panel for all options and controls-->
-        <StackPanel x:Name="ExtractionOptionsStack" 
-            Grid.Row="0" Grid.Column="1" 
-            Margin="0.667,10,1.333,9.667" 
-            Orientation="Vertical" 
-            CanVerticallyScroll="True">
+        <StackPanel x:Name="ExtractionOptionsStack"
+                    Grid.Row="0" Grid.Column="1"
+                    Margin="0.667,10,1.333,9.667"
+                    Orientation="Vertical"
+                    CanVerticallyScroll="True">
 
             <!--Title-->
-            <Label 
-                Content="Extraction Options" 
-                HorizontalAlignment="Left" 
-                VerticalAlignment="Center" 
-                Width="180"/>
+            <Label
+                Content="Extraction Options"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Width="180" />
 
             <!--Lines and Polylines Checkbox-->
             <CheckBox
@@ -59,18 +55,16 @@
                 Content="Lines and Polylines"
                 IsChecked="{Binding ExtractPolylinesAndLines, Mode=TwoWay}"
                 FontFamily="Century Gothic"
-                HorizontalAlignment="Left" 
-                VerticalAlignment="Top">
-            </CheckBox>
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" />
 
             <!--Hatches Checkbox-->
             <CheckBox
                 Name="HatchesCheckBox"
-                Content="Hatches" 
+                Content="Hatches"
                 IsChecked="{Binding ExtractHatches, Mode=TwoWay}"
-                HorizontalAlignment="Left" 
-                VerticalAlignment="Top">
-            </CheckBox>
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" />
 
             <!--Blocks Checkbox-->
             <CheckBox
@@ -78,20 +72,18 @@
                 Content="Output Blocks to a file"
                 IsChecked="{Binding ExtractBlocks, Mode=TwoWay}"
                 HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                ></CheckBox>
+                VerticalAlignment="Top" />
 
         </StackPanel>
 
         <!--Extract Button-->
         <Button
             Name="ExtractionButton"
-            Content="ExtractData" 
+            Content="ExtractData"
             Margin="0,5.333,10.333,9.667"
             Command="{Binding ExtractDataCommand}"
-            Grid.Row="1" 
-            Grid.Column="0" HorizontalAlignment="Right" Width="138"/>
+            Grid.Row="1"
+            Grid.Column="0" HorizontalAlignment="Right" Width="138" />
 
     </Grid>
 </Window>
-

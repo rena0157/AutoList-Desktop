@@ -8,16 +8,17 @@ namespace AutoCADLIGUI.ViewModels
 {
     public class MainPageViewModel : ObservableObject
     {
-        // Text string that is binded to the textbox
+        private bool _extractBlocks;
+        private bool _extractHatches;
+
+        // Checkbox switches
+        private bool _extractPolylinesAndLines;
+
+        // Text string that is bound to the text box
         private string _text;
 
-        // Checkbox bools
-        private bool _extractPolylinesAndLines;
-        private bool _extractHatches;
-        private bool _extractBlocks;
-
         /// <summary>
-        /// Text from the Textbox
+        ///     Text from the Text box
         /// </summary>
         public string Text
         {
@@ -30,7 +31,7 @@ namespace AutoCADLIGUI.ViewModels
         }
 
         /// <summary>
-        /// Checkbox IsChecked Property
+        ///     Checkbox IsChecked Property
         /// </summary>
         public bool ExtractPolylinesAndLines
         {
@@ -43,7 +44,7 @@ namespace AutoCADLIGUI.ViewModels
         }
 
         /// <summary>
-        /// Checkbox IsChecked Property for Extract Hatches Checkbox
+        ///     Checkbox IsChecked Property for Extract Hatches Checkbox
         /// </summary>
         public bool ExtractHatches
         {
@@ -56,7 +57,7 @@ namespace AutoCADLIGUI.ViewModels
         }
 
         /// <summary>
-        /// Checkbox IsChecked Property for Extract Blocks Checkbox
+        ///     Checkbox IsChecked Property for Extract Blocks Checkbox
         /// </summary>
         public bool ExtractBlocks
         {
@@ -71,12 +72,12 @@ namespace AutoCADLIGUI.ViewModels
         }
 
         /// <summary>
-        /// ICommand for the extract data command
+        ///     ICommand for the extract data command
         /// </summary>
         public ICommand ExtractDataCommand => new DelegateCommand(ExtractData);
 
         /// <summary>
-        /// Runs all of the back end required to extract the data from the string
+        ///     Runs all of the back end required to extract the data from the string
         /// </summary>
         private void ExtractData()
         {
@@ -84,21 +85,19 @@ namespace AutoCADLIGUI.ViewModels
             if (Text == null)
             {
                 MessageBox.Show("The text box is empty. Please place something in" +
-                                "the text box to be Parsed.", "Nothing to Extract", 
-                    MessageBoxButton.OK, 
+                                "the text box to be Parsed.", "Nothing to Extract",
+                    MessageBoxButton.OK,
                     MessageBoxImage.Information);
                 return;
             }
 
             // Error handling - Nothing selected
             if (!ExtractBlocks && !ExtractHatches && !ExtractPolylinesAndLines)
-            {
                 MessageBox.Show("You have not selected anything to be extracted. Please " +
-                                "Select the objects that you would like to extract", 
-                                "Object Selection Error", 
-                                MessageBoxButton.OK, 
-                                MessageBoxImage.Information);
-            }
+                                "Select the objects that you would like to extract",
+                    "Object Selection Error",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Information);
 
             // Create new _extraction results
             var extractionResults = new ExtractionResults(_text);
@@ -117,14 +116,13 @@ namespace AutoCADLIGUI.ViewModels
             {
                 if (extractionResults.OutputBlocksToCsv())
                     Text = "Extraction Successful";
-
             }
 
             // Polylines, Lines and Hatches
             else if (ExtractPolylinesAndLines && ExtractHatches)
             {
                 Text = baseString + $"Total Length: {extractionResults.TotalLength}m\n" +
-                        $"Total Area: {extractionResults.TotalArea} ha\n";
+                       $"Total Area: {extractionResults.TotalArea} ha\n";
             }
 
             // Polylines and Lines - Copies the total length to the clipboard
