@@ -1,34 +1,49 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq.Expressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using AutoCADLI;
 
 namespace AutoCADLI.Tests
 {
     [TestClass]
     public class AutoCADLiToolsTests
     {
-        private string _pathToFile = @"C:\Dev\AutoCADLIGUI\AutoCADLI.Tests\TestFiles\ExtractionTest.txt";
+        private const string PolylineLineTestFile
+            = @"C:\Dev\AutoCADLIGUI\AutoCADLI.Tests\TestFiles\PolylineTests.txt";
 
-        [TestMethod]
-        public void ExtractObjectsTests()
+        private const string HatchTestFile
+            = @"C:\Dev\AutoCADLIGUI\AutoCADLI.Tests\TestFiles\HatchTest.txt";
+
+        private static List<string> ReadLiFile(string path)
         {
-            var stringList = new List<string>();
-            using (var sr = File.OpenText(_pathToFile))
+            var returnList = new List<string>();
+            // extract the information from the text file.
+            using (var sr = File.OpenText(path))
             {
                 string line;
-                while ((line = sr.ReadLine()) != null)
-                {
-                    stringList.Add(line);
-                }
+                while ((line = sr.ReadLine()) != null) returnList.Add(line);
             }
 
-            var test = AutoCadliTools.ExtractObjects(stringList, ExtractionObject.PolylinesAndLines);
+            return returnList;
+        }
 
+        [TestMethod]
+        public void PolylineLineExtractionTests()
+        {
+            var stringList = ReadLiFile(PolylineLineTestFile);
+            // testing extraction of Polylines and Lines
+            var testExtractionPolylines = AutoCadliTools.ExtractObjects(stringList,
+                ExtractionObject.PolylinesAndLines);
+
+            // Total length tests
+            var totalLength = 0.0;
+            foreach (var obj in testExtractionPolylines) totalLength += obj;
+            // Assertion test for length extraction
+            Assert.IsTrue(Math.Abs(totalLength - 693.7963) < 0.0001);
+
+
+            // Printing of all the lines in the stringList
             #if false
             foreach (var line in stringList)
             {
@@ -36,7 +51,38 @@ namespace AutoCADLI.Tests
             }
             #endif
 
+            // Printing of all of the lengths in the polylines and lines list
+            #if false
+            foreach (var extractedObj in testExtractionPolylines)
+            {
+                Debug.WriteLine(extractedObj);
+            }
+            #endif
 
+            // testing extraction of hatches
+            var testExtractionHatches = AutoCadliTools.ExtractObjects(stringList,
+                ExtractionObject.Hatches);
+        }
+
+        [TestMethod]
+        public void HatchExtractionTests()
+        {
+            var stringList = ReadLiFile(HatchTestFile);
+            // Run the extraction code
+            var testHatchExtraction = AutoCadliTools.ExtractObjects(stringList,
+                ExtractionObject.Hatches);
+
+            var totalArea = 0.0;
+            foreach (var area in testHatchExtraction) totalArea += area;
+            Assert.IsTrue(Math.Abs(MathTools.Convert(totalArea, Conversions.M2Ha) - 1.64679315) < 0.0001,
+                          "Total Area: " + totalArea);
+
+            #if false
+            foreach (var listContents in testHatchExtraction)
+            {
+                Debug.WriteLine(listContents);
+            }
+            #endif
         }
     }
 }

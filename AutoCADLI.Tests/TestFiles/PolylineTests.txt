@@ -1,0 +1,255 @@
+﻿Select objects:
+                  LWPOLYLINE  Layer: "0"
+                            Space: Model space
+                   Handle = 240
+              Open
+    Constant width    0.0000
+              area   76.9729
+            length   30.9270
+
+          at point  X= 107.1441  Y=  46.3544  Z=   0.0000
+             bulge   -0.2599
+            center  X= 136.6538  Y=  39.0116  Z=   0.0000
+            radius   30.4094
+       start angle       166
+         end angle       108
+          at point  X= 127.3799  Y=  67.9725  Z=   0.0000
+
+                  LWPOLYLINE  Layer: "0"
+                            Space: Model space
+                   Handle = 23f
+              Open
+    Constant width    0.0000
+              area   283.7147
+            length   108.1817
+
+          at point  X=  22.6233  Y=  75.3348  Z=   0.0000
+          at point  X=  46.5126  Y=  82.5925  Z=   0.0000
+          at point  X=  33.5116  Y=  67.1564  Z=   0.0000
+          at point  X=  49.9254  Y=  67.1564  Z=   0.0000
+          at point  X=  63.7682  Y=  77.4484  Z=   0.0000
+          at point  X=  91.9913  Y=  69.3241  Z=   0.0000
+
+                  LINE      Layer: "0"
+Press ENTER to continue:
+                            Space: Model space
+                   Handle = 23e
+              from point, X=  20.2211  Y= -13.1952  Z=   0.0000
+                to point, X=  23.1302  Y=  -7.6551  Z=   0.0000
+          Length =   6.2575,  Angle in XY Plane =     62
+                  Delta X =   2.9091, Delta Y =    5.5401, Delta Z =   0.0000
+
+                  LINE      Layer: "0"
+                            Space: Model space
+                   Handle = 23d
+              from point, X=  23.6843  Y= -27.3226  Z=   0.0000
+                to point, X=  20.2211  Y= -13.1952  Z=   0.0000
+          Length =  14.5457,  Angle in XY Plane =    104
+                  Delta X =  -3.4632, Delta Y =   14.1274, Delta Z =   0.0000
+
+                  LINE      Layer: "0"
+                            Space: Model space
+                   Handle = 23c
+              from point, X=  37.1214  Y= -27.3226  Z=   0.0000
+                to point, X=  23.6843  Y= -27.3226  Z=   0.0000
+          Length =  13.4371,  Angle in XY Plane =    180
+                  Delta X = -13.4371, Delta Y =    0.0000, Delta Z =   0.0000
+
+                  LINE      Layer: "0"
+                            Space: Model space
+                   Handle = 23b
+              from point, X=  47.5110  Y= -41.5885  Z=   0.0000
+                to point, X=  37.1214  Y= -27.3226  Z=   0.0000
+          Length =  17.6482,  Angle in XY Plane =    126
+                  Delta X = -10.3895, Delta Y =   14.2659, Delta Z =   0.0000
+
+                  LINE      Layer: "0"
+Press ENTER to continue:
+                            Space: Model space
+                   Handle = 23a
+              from point, X=  63.3031  Y= -46.7131  Z=   0.0000
+                to point, X=  47.5110  Y= -41.5885  Z=   0.0000
+          Length =  16.6028,  Angle in XY Plane =    162
+                  Delta X = -15.7921, Delta Y =    5.1246, Delta Z =   0.0000
+
+                  LINE      Layer: "0"
+                            Space: Model space
+                   Handle = 239
+              from point, X=  73.2770  Y= -38.8184  Z=   0.0000
+                to point, X=  63.3031  Y= -46.7131  Z=   0.0000
+          Length =  12.7203,  Angle in XY Plane =    218
+                  Delta X =  -9.9740, Delta Y =   -7.8947, Delta Z =   0.0000
+
+                  LINE      Layer: "0"
+                            Space: Model space
+                   Handle = 238
+              from point, X=  81.4501  Y= -34.1093  Z=   0.0000
+                to point, X=  73.2770  Y= -38.8184  Z=   0.0000
+          Length =   9.4327,  Angle in XY Plane =    210
+                  Delta X =  -8.1731, Delta Y =   -4.7091, Delta Z =   0.0000
+
+                  LINE      Layer: "0"
+                            Space: Model space
+                   Handle = 237
+              from point, X= 106.2465  Y= -31.3392  Z=   0.0000
+                to point, X=  81.4501  Y= -34.1093  Z=   0.0000
+          Length =  24.9506,  Angle in XY Plane =    186
+                  Delta X = -24.7964, Delta Y =   -2.7701, Delta Z =   0.0000
+
+                  LINE      Layer: "0"
+Press ENTER to continue:
+                            Space: Model space
+                   Handle = 236
+              from point, X= 120.3762  Y= -21.2284  Z=   0.0000
+                to point, X= 106.2465  Y= -31.3392  Z=   0.0000
+          Length =  17.3746,  Angle in XY Plane =    216
+                  Delta X = -14.1298, Delta Y =  -10.1108, Delta Z =   0.0000
+
+                  LINE      Layer: "0"
+                            Space: Model space
+                   Handle = 235
+              from point, X= 114.0040  Y= -16.2423  Z=   0.0000
+                to point, X= 120.3762  Y= -21.2284  Z=   0.0000
+          Length =   8.0912,  Angle in XY Plane =    322
+                  Delta X =   6.3722, Delta Y =   -4.9861, Delta Z =   0.0000
+
+                  LINE      Layer: "0"
+                            Space: Model space
+                   Handle = 234
+              from point, X= 104.8612  Y=   5.0872  Z=   0.0000
+                to point, X= 114.0040  Y= -16.2423  Z=   0.0000
+          Length =  23.2065,  Angle in XY Plane =    293
+                  Delta X =   9.1428, Delta Y =  -21.3295, Delta Z =   0.0000
+
+                  LINE      Layer: "0"
+                            Space: Model space
+                   Handle = 233
+              from point, X=  99.3201  Y=  28.7713  Z=   0.0000
+                to point, X= 104.8612  Y=   5.0872  Z=   0.0000
+          Length =  24.3237,  Angle in XY Plane =    283
+                  Delta X =   5.5411, Delta Y =  -23.6841, Delta Z =   0.0000
+
+                  LINE      Layer: "0"
+Press ENTER to continue:
+                            Space: Model space
+                   Handle = 232
+              from point, X=  71.3376  Y=  28.7713  Z=   0.0000
+                to point, X=  99.3201  Y=  28.7713  Z=   0.0000
+          Length =  27.9825,  Angle in XY Plane =      0
+                  Delta X =  27.9825, Delta Y =    0.0000, Delta Z =   0.0000
+
+                  LINE      Layer: "0"
+                            Space: Model space
+                   Handle = 231
+              from point, X=  50.9741  Y=  28.7713  Z=   0.0000
+                to point, X=  71.3376  Y=  28.7713  Z=   0.0000
+          Length =  20.3635,  Angle in XY Plane =      0
+                  Delta X =  20.3635, Delta Y =    0.0000, Delta Z =   0.0000
+
+                  LINE      Layer: "0"
+                            Space: Model space
+                   Handle = 230
+              from point, X=  53.3291  Y=  34.4500  Z=   0.0000
+                to point, X=  50.9741  Y=  28.7713  Z=   0.0000
+          Length =   6.1476,  Angle in XY Plane =    247
+                  Delta X =  -2.3550, Delta Y =   -5.6786, Delta Z =   0.0000
+
+                  LINE      Layer: "0"
+                            Space: Model space
+                   Handle = 22f
+              from point, X=  75.6320  Y=  47.8848  Z=   0.0000
+                to point, X=  53.3291  Y=  34.4500  Z=   0.0000
+          Length =  26.0368,  Angle in XY Plane =    211
+                  Delta X = -22.3029, Delta Y =  -13.4348, Delta Z =   0.0000
+
+                  LINE      Layer: "0"
+Press ENTER to continue:
+                            Space: Model space
+                   Handle = 22e
+              from point, X=  67.0433  Y=  60.3501  Z=   0.0000
+                to point, X=  75.6320  Y=  47.8848  Z=   0.0000
+          Length =  15.1377,  Angle in XY Plane =    305
+                  Delta X =   8.5887, Delta Y =  -12.4653, Delta Z =   0.0000
+
+                  LINE      Layer: "0"
+                            Space: Model space
+                   Handle = 22d
+              from point, X=  33.9353  Y=  60.3501  Z=   0.0000
+                to point, X=  67.0433  Y=  60.3501  Z=   0.0000
+          Length =  33.1080,  Angle in XY Plane =      0
+                  Delta X =  33.1080, Delta Y =    0.0000, Delta Z =   0.0000
+
+                  LINE      Layer: "0"
+                            Space: Model space
+                   Handle = 22c
+              from point, X=   1.2429  Y=  43.1757  Z=   0.0000
+                to point, X=  33.9353  Y=  60.3501  Z=   0.0000
+          Length =  36.9290,  Angle in XY Plane =     28
+                  Delta X =  32.6924, Delta Y =   17.1744, Delta Z =   0.0000
+
+                  LINE      Layer: "0"
+                            Space: Model space
+                   Handle = 22b
+              from point, X=  -9.0081  Y=  28.9098  Z=   0.0000
+                to point, X=   1.2429  Y=  43.1757  Z=   0.0000
+          Length =  17.5670,  Angle in XY Plane =     54
+                  Delta X =  10.2510, Delta Y =   14.2659, Delta Z =   0.0000
+
+                  LINE      Layer: "0"
+Press ENTER to continue:
+                            Space: Model space
+                   Handle = 22a
+              from point, X=  -2.7744  Y=   9.3808  Z=   0.0000
+                to point, X=  -9.0081  Y=  28.9098  Z=   0.0000
+          Length =  20.4998,  Angle in XY Plane =    108
+                  Delta X =  -6.2337, Delta Y =   19.5290, Delta Z =   0.0000
+
+                  LINE      Layer: "0"
+                            Space: Model space
+                   Handle = 229
+              from point, X=  -9.7007  Y= -18.0429  Z=   0.0000
+                to point, X=  -2.7744  Y=   9.3808  Z=   0.0000
+          Length =  28.2849,  Angle in XY Plane =     76
+                  Delta X =   6.9264, Delta Y =   27.4237, Delta Z =   0.0000
+
+                  LINE      Layer: "0"
+                            Space: Model space
+                   Handle = 228
+              from point, X=   6.5069  Y= -28.0151  Z=   0.0000
+                to point, X=  -9.7007  Y= -18.0429  Z=   0.0000
+          Length =  19.0298,  Angle in XY Plane =    148
+                  Delta X = -16.2077, Delta Y =    9.9723, Delta Z =   0.0000
+
+                  LWPOLYLINE  Layer: "0"
+                            Space: Model space
+                   Handle = 227
+              Open
+    Constant width    0.0000
+              area   943.9372
+            length   88.5360
+
+          at point  X=  33.7968  Y= -14.3033  Z=   0.0000
+          at point  X=  45.4331  Y=   1.0706  Z=   0.0000
+Press ENTER to continue:
+          at point  X=  80.0648  Y=   8.6883  Z=   0.0000
+          at point  X=  89.2076  Y=  -5.5775  Z=   0.0000
+          at point  X=  77.5714  Y= -17.7659  Z=   0.0000
+
+                  LINE      Layer: "0"
+                            Space: Model space
+                   Handle = 20f
+              from point, X=  14.7704  Y=   7.7685  Z=   0.0000
+                to point, X=  27.8926  Y=   7.7685  Z=   0.0000
+          Length =  13.1222,  Angle in XY Plane =      0
+                  Delta X =  13.1222, Delta Y =    0.0000, Delta Z =   0.0000
+
+                  LWPOLYLINE  Layer: "0"
+                            Space: Model space
+                   Handle = 202
+              Open
+    Constant width    0.0000
+              area   0.0000
+            length   13.3519
+
+          at point  X=  14.7704  Y=  10.9499  Z=   0.0000
+          at point  X=  27.8926  Y=  13.4160  Z=   0.0000

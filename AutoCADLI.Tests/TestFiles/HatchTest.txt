@@ -1,0 +1,34 @@
+﻿elect objects:
+                  HATCH     Layer: "0"
+                            Space: Model space
+                   Handle = 25a
+                 Hatch pattern ANSI31
+                 Annotative: No
+                 Hatch scale    1.0000
+                 Hatch angle      0
+                 Associative
+                 Area      7830.8618
+                 Origin    X=   0.0000  Y=   0.0000  Z=   0.0000
+
+                  HATCH     Layer: "0"
+                            Space: Model space
+                   Handle = 255
+                 Hatch pattern ANSI31
+                 Annotative: No
+                 Hatch scale    1.0000
+                 Hatch angle      0
+                 Associative
+                 Area      4443.7526
+                 Origin    X=   0.0000  Y=   0.0000  Z=   0.0000
+
+                  HATCH     Layer: "0"
+                            Space: Model space
+                   Handle = 25d
+                 Hatch pattern ANSI31
+                 Annotative: No
+                 Hatch scale    1.0000
+                 Hatch angle      0
+                 Associative
+Press ENTER to continue:
+                 Area      4193.3171
+                 Origin    X=   0.0000  Y=   0.0000  Z=   0.0000

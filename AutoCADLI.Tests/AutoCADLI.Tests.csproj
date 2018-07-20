@@ -55,7 +55,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TestFiles\ExtractionTest.txt" />
+    <Content Include="TestFiles\PolylineTests.txt" />
+    <Content Include="TestFiles\HatchTest.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AutoCADLI\AutoCADLI.csproj">
