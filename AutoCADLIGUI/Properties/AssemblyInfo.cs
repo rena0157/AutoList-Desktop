@@ -8,7 +8,7 @@ using System.Windows;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("AutoCADLIGUI")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("An Application that is used to Extract Data from AutoCAD List text")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("AutoCADLIGUI")]
