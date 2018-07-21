@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -75,7 +74,7 @@ namespace AutoCADLI.Tests
             var totalArea = 0.0;
             foreach (var area in testHatchExtraction) totalArea += area;
             Assert.IsTrue(Math.Abs(MathTools.Convert(totalArea, Conversions.M2Ha) - 1.64679315) < 0.0001,
-                          "Total Area: " + totalArea);
+                "Total Area: " + totalArea);
 
             #if false
             foreach (var listContents in testHatchExtraction)

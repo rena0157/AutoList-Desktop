@@ -1,20 +1,18 @@
-﻿using System.Diagnostics;
-using System.Windows;
-using System.Windows.Input;
+﻿using System.Windows;
 using AutoCADLIGUI.Models;
 
 namespace AutoCADLIGUI
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    ///     Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        ExtractionResults results;
+        private ExtractionResults results;
+
         public MainWindow()
         {
             InitializeComponent();
         }
     }
-
 }
