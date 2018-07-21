@@ -4,7 +4,6 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewModels="clr-namespace:AutoCADLIGUI.ViewModels"
-        xmlns:local="clr-namespace:AutoCADLIGUI"
         mc:Ignorable="d"
         Icon="/Resources/StandardsFileIcon.ico"
         Title="AutoCAD List Tools" Height="450" Width="800"
@@ -23,13 +22,14 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
+            <ColumnDefinition Width="113.333"/>
             <ColumnDefinition Width="190" />
         </Grid.ColumnDefinitions>
 
         <!--Text box where data is to be entered-->
         <TextBox
             x:Name="MainTextBox"
-            Margin="1,0,0,0"
+            Margin="10,0,8.333,45.667"
             TextWrapping="Wrap"
             AcceptsReturn="True"
             Text="{Binding Text, Mode=TwoWay}"
@@ -37,20 +37,21 @@
             HorizontalScrollBarVisibility="Auto"
             BorderBrush="LightGray"
             BorderThickness="1"
-            Grid.Column="0" Grid.Row="0" />
+            Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
 
         <!--Stack Panel for all options and controls-->
         <StackPanel x:Name="ExtractionOptionsStack"
-                    Grid.Row="0" Grid.Column="1"
-                    Margin="0.667,10,1.333,9.667"
+                    Grid.Row="0" Grid.Column="2"
                     Orientation="Vertical"
-                    CanVerticallyScroll="True">
+                    CanVerticallyScroll="True" Margin="2,0,0,0" 
+                    >
 
             <!--Title-->
             <Label
                 Content="Extraction Options"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
+                VerticalContentAlignment="Center"
                 Width="180" />
 
             <!--Lines and Polylines Checkbox-->
@@ -59,6 +60,7 @@
                 Content="Lines and Polylines"
                 IsChecked="{Binding ExtractPolylinesAndLines, Mode=TwoWay}"
                 HorizontalAlignment="Left"
+                VerticalContentAlignment="Center"
                 VerticalAlignment="Top" />
 
             <!--Hatches Checkbox-->
@@ -67,6 +69,7 @@
                 Content="Hatches"
                 IsChecked="{Binding ExtractHatches, Mode=TwoWay}"
                 HorizontalAlignment="Left"
+                VerticalContentAlignment="Center"
                 VerticalAlignment="Top" />
 
             <!--Blocks Checkbox-->
@@ -74,19 +77,45 @@
                 x:Name="BlocksCheckBox"
                 Content="Output Blocks to a file"
                 IsChecked="{Binding ExtractBlocks, Mode=TwoWay}"
+                VerticalContentAlignment="Center"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top" />
-            
-            
+
+
         </StackPanel>
 
         <!--Extract Button-->
         <Button
             Name="ExtractionButton"
-            Content="ExtractData"
-            Margin="0,5,25,10"
+            Content="Extract Data"
+            Margin="0,13.333,48.333,12.667"
+            HorizontalContentAlignment="Center"
             Command="{Binding ExtractDataCommand}"
             Grid.Row="1"
-            Grid.Column="1" HorizontalAlignment="Right" Width="138" />
+            Grid.Column="2" 
+            VerticalAlignment="Center" Height="20"
+            HorizontalAlignment="Right" Width="100" />
+
+        <!--The File Browse text box-->
+        <TextBox 
+            Margin="10,13.333,10,12.667" 
+            Grid.Row="1" Grid.Column="0"
+            TextWrapping="NoWrap"
+            Text="{Binding BrowseText, Mode=TwoWay}"
+            VerticalAlignment="Center" Height="20"
+            VerticalContentAlignment="Center"
+            MinWidth="30"/>
+        
+        <!--The Browse Button-->
+        <Button
+            Grid.Row="1"
+            Grid.Column="1"
+            Content="Browse"
+            Command="{Binding BrowseButtonCommand}"
+            Margin="5"
+            VerticalAlignment="Center" Height="20"
+            HorizontalAlignment="Left" Width="100"
+            ></Button>
+
     </Grid>
 </Window>

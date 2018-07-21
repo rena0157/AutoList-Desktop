@@ -1,13 +1,18 @@
-﻿using System.Globalization;
+﻿using System.Diagnostics;
+using System.Globalization;
+using System.IO;
 using System.Windows;
 using System.Windows.Input;
 using AutoCADLIGUI.Framework;
 using AutoCADLIGUI.Models;
+using Microsoft.Win32;
 
 namespace AutoCADLIGUI.ViewModels
 {
     public class MainPageViewModel : ObservableObject
     {
+        // Property Elements
+
         private bool _extractBlocks;
         private bool _extractHatches;
 
@@ -16,6 +21,9 @@ namespace AutoCADLIGUI.ViewModels
 
         // Text string that is bound to the text box
         private string _text;
+
+        //
+        private string _browseText;
 
         /// <summary>
         ///     Text from the Text box
@@ -72,9 +80,45 @@ namespace AutoCADLIGUI.ViewModels
         }
 
         /// <summary>
+        /// The string from the BrowseText box
+        /// </summary>
+        public string BrowseText
+        {
+            get => _browseText;
+            set
+            {
+                _browseText = value;
+                RaisePropertyChangedEvent("BrowseText");
+            }
+        }
+
+        // Commands
+
+        /// <summary>
         ///     ICommand for the extract data command
         /// </summary>
         public ICommand ExtractDataCommand => new DelegateCommand(ExtractData);
+
+        /// <summary>
+        /// Opens a file dialog to select a file and then copies that files contents to the text box for extraction
+        /// </summary>
+        public ICommand BrowseButtonCommand => new DelegateCommand(GetTextFromFile);
+
+        /// <summary>
+        /// <see cref="BrowseButtonCommand"/>
+        /// </summary>
+        private void GetTextFromFile()
+        {
+
+            var opnFileDialog = new OpenFileDialog()
+            {
+                CheckPathExists = true,
+                Filter = "Text Files|*.txt"
+            };
+            opnFileDialog.ShowDialog();
+            BrowseText = opnFileDialog.FileName;
+            Text = File.ReadAllText(opnFileDialog.FileName);
+        }
 
         /// <summary>
         ///     Runs all of the back end required to extract the data from the string
