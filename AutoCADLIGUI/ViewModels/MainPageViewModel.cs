@@ -109,15 +109,24 @@ namespace AutoCADLIGUI.ViewModels
         /// </summary>
         private void GetTextFromFile()
         {
-
-            var opnFileDialog = new OpenFileDialog()
+            try
             {
-                CheckPathExists = true,
-                Filter = "Text Files|*.txt"
-            };
-            opnFileDialog.ShowDialog();
-            BrowseText = opnFileDialog.FileName;
-            Text = File.ReadAllText(opnFileDialog.FileName);
+                var opnFileDialog = new OpenFileDialog()
+                {
+                    CheckPathExists = true,
+                    Filter = "Text Files|*.txt"
+                };
+                opnFileDialog.ShowDialog();
+                BrowseText = opnFileDialog.FileName;
+                Text = File.ReadAllText(opnFileDialog.FileName);
+            }
+            catch (IOException exception)
+            {
+                MessageBox.Show("Error: " + exception.Message,
+                    "Read Error", 
+                    MessageBoxButton.OK, 
+                    MessageBoxImage.Warning);
+            }
         }
 
         /// <summary>
