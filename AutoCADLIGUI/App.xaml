@@ -4,6 +4,10 @@
              xmlns:local="clr-namespace:AutoCADLIGUI"
              StartupUri="Views/MainWindow.xaml">
     <Application.Resources>
-
+        <ResourceDictionary>
+            <Style TargetType="Window" x:Key="WindowStyle">
+                <Setter Property="FontFamily" Value="Century Gothic"></Setter>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

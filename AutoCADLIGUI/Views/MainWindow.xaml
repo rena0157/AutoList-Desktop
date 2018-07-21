@@ -4,14 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewModels="clr-namespace:AutoCADLIGUI.ViewModels"
+        xmlns:local="clr-namespace:AutoCADLIGUI"
         mc:Ignorable="d"
         Icon="/Resources/StandardsFileIcon.ico"
         Title="AutoCAD List Tools" Height="450" Width="800"
-        FontFamily="Century Gothic">
+        Style="{StaticResource WindowStyle}"
+        >
+
     <Window.DataContext>
         <viewModels:MainPageViewModel />
     </Window.DataContext>
-
 
     <Grid>
         <!--Grid Definitions-->
@@ -27,12 +29,14 @@
         <!--Text box where data is to be entered-->
         <TextBox
             x:Name="MainTextBox"
-            Margin="10,10,4.333,9.667"
+            Margin="1,0,0,0"
             TextWrapping="Wrap"
             AcceptsReturn="True"
             Text="{Binding Text, Mode=TwoWay}"
             VerticalScrollBarVisibility="Auto"
             HorizontalScrollBarVisibility="Auto"
+            BorderBrush="LightGray"
+            BorderThickness="1"
             Grid.Column="0" Grid.Row="0" />
 
         <!--Stack Panel for all options and controls-->
@@ -54,7 +58,6 @@
                 Name="PolylinesCheckBox"
                 Content="Lines and Polylines"
                 IsChecked="{Binding ExtractPolylinesAndLines, Mode=TwoWay}"
-                FontFamily="Century Gothic"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top" />
 
@@ -73,17 +76,17 @@
                 IsChecked="{Binding ExtractBlocks, Mode=TwoWay}"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top" />
-
+            
+            
         </StackPanel>
 
         <!--Extract Button-->
         <Button
             Name="ExtractionButton"
             Content="ExtractData"
-            Margin="0,5.333,10.333,9.667"
+            Margin="0,5,25,10"
             Command="{Binding ExtractDataCommand}"
             Grid.Row="1"
-            Grid.Column="0" HorizontalAlignment="Right" Width="138" />
-
+            Grid.Column="1" HorizontalAlignment="Right" Width="138" />
     </Grid>
 </Window>
