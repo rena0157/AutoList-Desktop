@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using System.Globalization;
+﻿using System.Globalization;
 using System.IO;
 using System.Windows;
 using System.Windows.Input;
@@ -112,7 +111,7 @@ namespace AutoCADLIGUI.ViewModels
             try
             {
                 // Open the file dialog for text files and save the contents 
-                // of the file into the Textbox on screen
+                // of the file into the Text box on screen
                 var opnFileDialog = new OpenFileDialog()
                 {
                     CheckPathExists = true,
