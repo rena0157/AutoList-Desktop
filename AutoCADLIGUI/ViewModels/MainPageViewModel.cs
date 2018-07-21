@@ -111,6 +111,8 @@ namespace AutoCADLIGUI.ViewModels
         {
             try
             {
+                // Open the file dialog for text files and save the contents 
+                // of the file into the Textbox on screen
                 var opnFileDialog = new OpenFileDialog()
                 {
                     CheckPathExists = true,
