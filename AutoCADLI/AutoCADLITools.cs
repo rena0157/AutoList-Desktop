@@ -1,4 +1,10 @@
-﻿using System;
+﻿// AutoCADLITools.cs
+// By: Adam Renaud
+// Created: July, 2018
+// Purpose: to house the AutoCADLITools class that holds the functionality 
+// for extracting data from List strings from AutoCAD
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;

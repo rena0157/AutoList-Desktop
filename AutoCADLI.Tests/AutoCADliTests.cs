@@ -1,4 +1,9 @@
-﻿using System;
+﻿// AutoCADliTests.cs
+// By: Adam Renaud
+// Created: July, 2018
+// Purpose: To test the AutoCADLI project - Unit Tests
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;

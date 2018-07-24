@@ -1,4 +1,10 @@
-﻿using System;
+﻿// MathTools.cs
+// By: Adam Renaud
+// Created: July, 2018
+// Purpose: To house the MathTools class that is used
+// to add mathematic functions to the AutoCADLI project
+
+using System;
 
 namespace AutoCADLI
 {

@@ -1,4 +1,9 @@
-﻿using System;
+﻿// DelegateCommand.cs
+// By: Adam Renaud
+// Created: July, 2018
+// Purpose: Contains the framework for the MVVM architechture that is used in this project
+
+using System;
 using System.Windows.Input;
 
 namespace AutoCADLIGUI.Framework
