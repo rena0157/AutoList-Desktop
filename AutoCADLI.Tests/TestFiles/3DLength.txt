@@ -1,0 +1,12 @@
+﻿This File contains a length and a 3-D length
+We only want the 2 dimensional length 
+
+LIST 1 found
+                  LINE      Layer: "0"
+                            Space: Model space
+                   Handle = 20c
+              from point, X= -17.0679  Y=  -5.6686  Z=   0.0000
+                to point, X=  -3.6845  Y=   7.6682  Z=   4.3287
+          In Current UCS, Length =  18.8941,  Angle in XY Plane =     45
+                  3D Length  =  19.3836,  Angle from XY Plane =     13
+                  Delta X =  13.3835, Delta Y =   13.3368, Delta Z =   4.3287

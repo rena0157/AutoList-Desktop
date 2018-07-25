@@ -55,6 +55,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="TestFiles\3DLength.txt" />
+    <Content Include="TestFiles\Issue1FailingText.txt" />
     <Content Include="TestFiles\PolylineTests.txt" />
     <Content Include="TestFiles\HatchTest.txt" />
   </ItemGroup>
