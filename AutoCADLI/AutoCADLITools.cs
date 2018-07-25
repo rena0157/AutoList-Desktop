@@ -15,8 +15,9 @@ namespace AutoCADLI
     {
         // Regex presets
         private static readonly Regex PolylineRegex = new Regex(@"length\s*\d*\.\d*");
-        private static readonly Regex LineRegex = new Regex(@"Length\s*=\s*\d*\.\d*");
+        private static readonly Regex LineRegex = new Regex(@"(?<!3D\s*)Length\s*=\s*\d*\.\d*");
         private static readonly Regex HatchRegex = new Regex(@"^\s*Area\s*\d*\.\d*");
+        private static readonly Regex DecimalNumber = new Regex(@"\d*\.\d*");
 
         /// <summary>
         ///     Method used to extract objects from a string list which is based on the
@@ -86,20 +87,25 @@ namespace AutoCADLI
         // Used to parse the text taken from the line of the LI text output - for Polylines
         private static string ParsePolylineText(string inputText)
         {
-            return inputText.Trim('l', 'e', 'n', 'g', 'h', 't', ' ');
+            var polylineMatch = PolylineRegex.Match(inputText);
+            var numberMatch = DecimalNumber.Match(polylineMatch.Value);
+            return numberMatch.Value;
         }
 
         // Used to parse the text taken from the line of the LI text output - for Lines
         private static string ParseLineText(string inputText)
         {
-            var tempString = inputText.Split(',')[0];
-            return tempString.Trim('L', 'e', 'n', 'g', 'h', 't', '=', ' ');
+            var lengthMatch = LineRegex.Match(inputText);
+            var numberMatch = DecimalNumber.Match(lengthMatch.Value);
+            return numberMatch.Value;
         }
 
         // parses the text from Hatch li text output
         private static string ParseHatchText(string inputText)
         {
-            return inputText.Trim(' ', 'A', 'a', 'r', 'e');
+            var hatchMatch = HatchRegex.Match(inputText);
+            var numberMatch = DecimalNumber.Match(hatchMatch.Value);
+            return numberMatch.Value;
         }
     }
 

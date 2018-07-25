@@ -1,0 +1,343 @@
+LIST 36 found
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5e42b8
+              from point, X= 473.7479  Y= 174.2093  Z=   0.0000
+                to point, X= 489.8903  Y=  17.3282  Z=   0.0000
+          In Current UCS, Length = 157.7094,  Angle in XY Plane = 275.87
+                  3D Length  = 157.7094,  Angle from XY Plane =   0.00
+                  Delta X =  16.1423, Delta Y = -156.8811, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f224b
+              from point, X= 465.0216  Y= 175.9728  Z=   0.0000
+                to point, X= 481.4349  Y=  16.4579  Z=   0.0000
+          In Current UCS, Length = 160.3571,  Angle in XY Plane = 275.87
+                  3D Length  = 160.3571,  Angle from XY Plane =   0.00
+                  Delta X =  16.4134, Delta Y = -159.5149, Delta Z =   0.0000
+Press ENTER to continue:
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f224d
+              from point, X= 539.4193  Y= 175.9045  Z=   0.0000
+                to point, X= 555.5648  Y=  18.9925  Z=   0.0000
+          In Current UCS, Length = 157.7404,  Angle in XY Plane = 275.87
+                  3D Length  = 157.7404,  Angle from XY Plane =   0.00
+                  Delta X =  16.1455, Delta Y = -156.9120, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f2250
+              from point, X= 557.1082  Y=  87.0373  Z=   0.0000
+                to point, X= 564.0202  Y=  19.8626  Z=   0.0000
+          In Current UCS, Length =  67.5294,  Angle in XY Plane = 275.87
+                  3D Length  =  67.5294,  Angle from XY Plane =   0.00
+                  Delta X =   6.9120, Delta Y =  -67.1747, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+Press ENTER to continue:
+                   Transparency: 0
+                   Handle = 5f2253
+              from point, X= 547.0963  Y=   9.6225  Z=   0.0000
+                to point, X= 498.3324  Y=   9.6982  Z=   0.0000
+          In Current UCS, Length =  48.7639,  Angle in XY Plane = 179.91
+                  3D Length  =  48.7639,  Angle from XY Plane =   0.00
+                  Delta X = -48.7639, Delta Y =    0.0757, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f2339
+              from point, X= 482.2111  Y= 183.5793  Z=   0.0000
+                to point, X= 530.9718  Y= 183.5345  Z=   0.0000
+          In Current UCS, Length =  48.7607,  Angle in XY Plane = 359.95
+                  3D Length  =  48.7607,  Angle from XY Plane =   0.00
+                  Delta X =  48.7607, Delta Y =   -0.0448, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f233c
+Press ENTER to continue:
+              from point, X= 407.8134  Y= 183.6476  Z=   0.0000
+                to point, X= 456.5740  Y= 183.6028  Z=   0.0000
+          In Current UCS, Length =  48.7607,  Angle in XY Plane = 359.95
+                  3D Length  =  48.7607,  Angle from XY Plane =   0.00
+                  Delta X =  48.7607, Delta Y =   -0.0448, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f2346
+              from point, X= 399.3502  Y= 174.2776  Z=   0.0000
+                to point, X= 415.2150  Y=  20.0934  Z=   0.0000
+          In Current UCS, Length = 154.9983,  Angle in XY Plane = 275.87
+                  3D Length  = 154.9983,  Angle from XY Plane =   0.00
+                  Delta X =  15.8648, Delta Y = -154.1842, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f234d
+              from point, X= 331.2987  Y=  36.4446  Z=   0.0001
+                to point, X= 333.3272  Y=  16.6914  Z=   0.0000
+Press ENTER to continue:
+          In Current UCS, Length =  19.8571,  Angle in XY Plane = 275.86
+                  3D Length  =  19.8571,  Angle from XY Plane =   0.00
+                  Delta X =   2.0285, Delta Y =  -19.7532, Delta Z =  -0.0001
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f234f
+              from point, X= 398.2911  Y=   9.8535  Z=   0.0000
+                to point, X= 350.2251  Y=   9.9281  Z=   0.0000
+          In Current UCS, Length =  48.0661,  Angle in XY Plane = 179.91
+                  3D Length  =  48.0661,  Angle from XY Plane =   0.00
+                  Delta X = -48.0661, Delta Y =    0.0746, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f2350
+              from point, X= 339.7542  Y=  37.3129  Z=   0.0000
+                to point, X= 341.7827  Y=  17.5598  Z=   0.0000
+          In Current UCS, Length =  19.8571,  Angle in XY Plane = 275.86
+                  3D Length  =  19.8571,  Angle from XY Plane =   0.00
+Press ENTER to continue:
+                  Delta X =   2.0285, Delta Y =  -19.7532, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f2351
+              from point, X= 396.2850  Y=  46.6067  Z=   0.0000
+                to point, X= 348.2229  Y=  46.6813  Z=   0.0000
+          In Current UCS, Length =  48.0621,  Angle in XY Plane = 179.91
+                  3D Length  =  48.0621,  Angle from XY Plane =   0.00
+                  Delta X = -48.0621, Delta Y =    0.0746, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f2352
+              from point, X= 393.6343  Y=  55.1108  Z=   0.0000
+                to point, X= 348.2361  Y=  55.1813  Z=   0.0000
+          In Current UCS, Length =  45.3983,  Angle in XY Plane = 179.91
+                  3D Length  =  45.3983,  Angle from XY Plane =   0.00
+                  Delta X = -45.3982, Delta Y =    0.0705, Delta Z =   0.0000
+Press ENTER to continue:
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f2353
+              from point, X= 404.7271  Y=  38.9767  Z=   0.0000
+                to point, X= 406.7597  Y=  19.2235  Z=   0.0000
+          In Current UCS, Length =  19.8575,  Angle in XY Plane = 275.87
+                  3D Length  =  19.8575,  Angle from XY Plane =   0.00
+                  Delta X =   2.0325, Delta Y =  -19.7532, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f2370
+              from point, X= 399.9932  Y=  84.9841  Z=   0.0000
+                to point, X= 402.1029  Y=  64.4808  Z=   0.0000
+          In Current UCS, Length =  20.6116,  Angle in XY Plane = 275.87
+                  3D Length  =  20.6116,  Angle from XY Plane =   0.00
+                  Delta X =   2.1097, Delta Y =  -20.5033, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+Press ENTER to continue:
+                   Transparency: 0
+                   Handle = 5f237b
+              from point, X= 391.5510  Y=  92.6141  Z=   0.0000
+                to point, X= 340.8395  Y=  92.6928  Z=   0.0000
+          In Current UCS, Length =  50.7116,  Angle in XY Plane = 179.91
+                  3D Length  =  50.7116,  Angle from XY Plane =   0.00
+                  Delta X = -50.7115, Delta Y =    0.0787, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f237d
+              from point, X= 317.6498  Y= 169.3527  Z=   0.0000
+                to point, X= 323.9548  Y= 107.9561  Z=   0.0000
+          In Current UCS, Length =  61.7195,  Angle in XY Plane = 275.86
+                  3D Length  =  61.7195,  Angle from XY Plane =   0.00
+                  Delta X =   6.3051, Delta Y =  -61.3966, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f237e
+Press ENTER to continue:
+              from point, X= 388.9004  Y= 101.1182  Z=   0.0000
+                to point, X= 340.8527  Y= 101.1928  Z=   0.0000
+          In Current UCS, Length =  48.0477,  Angle in XY Plane = 179.91
+                  3D Length  =  48.0477,  Angle from XY Plane =   0.00
+                  Delta X = -48.0477, Delta Y =    0.0746, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f237f
+              from point, X= 326.1053  Y= 170.2210  Z=   0.0000
+                to point, X= 332.4104  Y= 108.8244  Z=   0.0000
+          In Current UCS, Length =  61.7195,  Angle in XY Plane = 275.86
+                  3D Length  =  61.7195,  Angle from XY Plane =   0.00
+                  Delta X =   6.3051, Delta Y =  -61.3966, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f2380
+              from point, X= 390.6462  Y= 175.8239  Z=   0.0000
+                to point, X= 397.3689  Y= 110.4882  Z=   0.0000
+Press ENTER to continue:
+          In Current UCS, Length =  65.6806,  Angle in XY Plane = 275.87
+                  3D Length  =  65.6806,  Angle from XY Plane =   0.00
+                  Delta X =   6.7227, Delta Y =  -65.3357, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f2381
+              from point, X= 352.4727  Y= 181.4735  Z=   0.0000
+                to point, X= 333.6925  Y= 179.5449  Z=   0.0000
+          In Current UCS, Length =  18.8790,  Angle in XY Plane = 185.86
+                  3D Length  =  18.8790,  Angle from XY Plane =   0.00
+                  Delta X = -18.7802, Delta Y =   -1.9286, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f23ca
+              from point, X= 781.2193  Y=  93.0490  Z=   0.0000
+                to point, X= 722.9077  Y=  93.9573  Z=   0.0000
+          In Current UCS, Length =  58.3186,  Angle in XY Plane = 179.11
+                  3D Length  =  58.3186,  Angle from XY Plane =   0.00
+Press ENTER to continue:
+                  Delta X = -58.3115, Delta Y =    0.9084, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f23cb
+              from point, X= 611.6372  Y= 104.1917  Z=   0.0000
+                to point, X= 562.8028  Y= 104.9524  Z=   0.0000
+          In Current UCS, Length =  48.8403,  Angle in XY Plane = 179.11
+                  3D Length  =  48.8403,  Angle from XY Plane =   0.00
+                  Delta X = -48.8343, Delta Y =    0.7607, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f23cc
+              from point, X= 548.1457  Y= 174.1409  Z=   0.0000
+                to point, X= 554.4799  Y= 112.5813  Z=   0.0000
+          In Current UCS, Length =  61.8846,  Angle in XY Plane = 275.87
+                  3D Length  =  61.8846,  Angle from XY Plane =   0.00
+                  Delta X =   6.3342, Delta Y =  -61.5596, Delta Z =   0.0000
+Press ENTER to continue:
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f23cd
+              from point, X= 556.6088  Y= 183.5110  Z=   0.0000
+                to point, X= 605.3695  Y= 183.4662  Z=   0.0000
+          In Current UCS, Length =  48.7607,  Angle in XY Plane = 359.95
+                  3D Length  =  48.7607,  Angle from XY Plane =   0.00
+                  Delta X =  48.7607, Delta Y =   -0.0448, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f23ce
+              from point, X= 613.8170  Y= 175.8362  Z=   0.0000
+                to point, X= 620.2249  Y= 113.5607  Z=   0.0000
+          In Current UCS, Length =  62.6044,  Angle in XY Plane = 275.87
+                  3D Length  =  62.6044,  Angle from XY Plane =   0.00
+                  Delta X =   6.4079, Delta Y =  -62.2755, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+Press ENTER to continue:
+                   Transparency: 0
+                   Handle = 5f23d4
+              from point, X= 351.6044  Y= 189.9291  Z=   0.0000
+                to point, X= 332.8240  Y= 188.0004  Z=   0.0000
+          In Current UCS, Length =  18.8791,  Angle in XY Plane = 185.86
+                  3D Length  =  18.8791,  Angle from XY Plane =   0.00
+                  Delta X = -18.7804, Delta Y =   -1.9286, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f23d6
+              from point, X= 395.5401  Y= 192.1589  Z=   0.0000
+                to point, X= 453.9800  Y= 192.1052  Z=   0.0000
+          In Current UCS, Length =  58.4399,  Angle in XY Plane = 359.95
+                  3D Length  =  58.4399,  Angle from XY Plane =   0.00
+                  Delta X =  58.4399, Delta Y =   -0.0537, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f23d7
+Press ENTER to continue:
+              from point, X= 479.5935  Y= 192.0817  Z=   0.0000
+                to point, X= 603.2545  Y= 191.9681  Z=   0.0000
+          In Current UCS, Length = 123.6610,  Angle in XY Plane = 359.95
+                  3D Length  = 123.6610,  Angle from XY Plane =   0.00
+                  Delta X = 123.6610, Delta Y =   -0.1136, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f23de
+              from point, X= 611.7845  Y= 224.7103  Z=   0.0000
+                to point, X= 611.7623  Y= 200.4603  Z=   0.0000
+          In Current UCS, Length =  24.2500,  Angle in XY Plane = 269.95
+                  3D Length  =  24.2500,  Angle from XY Plane =   0.00
+                  Delta X =  -0.0223, Delta Y =  -24.2500, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f23df
+              from point, X= 611.7616  Y= 199.7103  Z=   0.0000
+                to point, X= 611.8075  Y= 249.7103  Z=   0.0000
+Press ENTER to continue:
+          In Current UCS, Length =  50.0000,  Angle in XY Plane =  89.95
+                  3D Length  =  50.0000,  Angle from XY Plane =   0.00
+                  Delta X =   0.0459, Delta Y =   50.0000, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f7414
+              from point, X= 714.2768  Y=  85.3030  Z=   0.0000
+                to point, X= 715.4451  Y=  21.3931  Z=   0.0000
+          In Current UCS, Length =  63.9206,  Angle in XY Plane = 271.05
+                  3D Length  =  63.9206,  Angle from XY Plane =   0.00
+                  Delta X =   1.1684, Delta Y =  -63.9099, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f7418
+              from point, X= 789.5869  Y=  84.5326  Z=   0.0000
+                to point, X= 789.4580  Y=  21.5669  Z=   0.0000
+          In Current UCS, Length =  62.9658,  Angle in XY Plane = 269.88
+                  3D Length  =  62.9658,  Angle from XY Plane =   0.00
+Press ENTER to continue:
+                  Delta X =  -0.1289, Delta Y =  -62.9657, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f741a
+              from point, X= 723.9490  Y=  13.0485  Z=   0.0000
+                to point, X= 780.9633  Y=  13.0843  Z=   0.0000
+          In Current UCS, Length =  57.0143,  Angle in XY Plane =   0.04
+                  3D Length  =  57.0143,  Angle from XY Plane =   0.00
+                  Delta X =  57.0143, Delta Y =    0.0358, Delta Z =   0.0000
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f741e
+              from point, X= 798.0868  Y=  84.5154  Z=   0.0001
+                to point, X= 797.9579  Y=  21.5491  Z=   0.0000
+          In Current UCS, Length =  62.9665,  Angle in XY Plane = 269.88
+                  3D Length  =  62.9665,  Angle from XY Plane =   0.00
+                  Delta X =  -0.1289, Delta Y =  -62.9664, Delta Z =   0.0000
+Press ENTER to continue:
+                  LINE      Layer: "Curbline"
+                            Space: Model space
+                   Transparency: 0
+                   Handle = 5f7421
+              from point, X= 723.9544  Y=   4.5485  Z=   0.0000
+                to point, X= 780.9687  Y=   4.5843  Z=   0.0000
+          In Current UCS, Length =  57.0143,  Angle in XY Plane =   0.04
+                  3D Length  =  57.0143,  Angle from XY Plane =   0.00
+                  Delta X =  57.0143, Delta Y =    0.0358, Delta Z =   0.0000
+Command:  LIST
+Select objects: *Cancel*

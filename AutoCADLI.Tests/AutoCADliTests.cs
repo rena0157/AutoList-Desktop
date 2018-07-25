@@ -5,6 +5,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -87,6 +88,34 @@ namespace AutoCADLI.Tests
                 Debug.WriteLine(listContents);
             }
             #endif
+        }
+
+        [TestMethod]
+        public void Issue1Test_CausingException()
+        {
+            // Arrange
+            const string pathToFile = @"C:\Dev\AutoCADLIGUI\AutoCADLI.Tests\TestFiles\Issue1FailingText.txt";
+            var stringList = ReadLiFile(pathToFile);
+
+            // Act
+            var testExtraction = AutoCadliTools.ExtractObjects(stringList, ExtractionObject.PolylinesAndLines);
+
+        }
+
+        [TestMethod]
+        public void ThreeDLengthTest()
+        {
+            // Arrange
+            const string pathToFile = @"C:\Dev\AutoCADLIGUI\AutoCADLI.Tests\TestFiles\3DLength.txt";
+
+            // Act
+            var stringList = ReadLiFile(pathToFile);
+            var testExtraction = AutoCadliTools.ExtractObjects(stringList, ExtractionObject.PolylinesAndLines);
+            var numberOfItems = testExtraction.Count;
+
+            // Assert
+            Assert.IsTrue(numberOfItems == 1);
+            Assert.IsTrue(Math.Abs(testExtraction[0] - 18.8941) < 0.01);
         }
     }
 }
