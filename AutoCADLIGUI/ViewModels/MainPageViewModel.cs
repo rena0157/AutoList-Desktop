@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Globalization;
 using System.IO;
 using System.Windows;
 using System.Windows.Input;
@@ -124,9 +125,13 @@ namespace AutoCADLIGUI.ViewModels
             catch (IOException exception)
             {
                 MessageBox.Show("Error: " + exception.Message,
-                    "Read Error", 
-                    MessageBoxButton.OK, 
+                    "Read Error",
+                    MessageBoxButton.OK,
                     MessageBoxImage.Warning);
+            }
+            catch (ArgumentException)
+            {
+                // Do nothing... no file was chosen the user canceled
             }
         }
 
