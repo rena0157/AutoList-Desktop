@@ -1,8 +1,15 @@
-﻿// MathTools.cs
+﻿// AutoCADLI
+// MathTools.cs
+// 
+// ============================================================
+// 
+// Created: 2018-07-22
+// Last Updated: 2018-07-28-3:35 PM
 // By: Adam Renaud
-// Created: July, 2018
-// Purpose: To house the MathTools class that is used
-// to add mathematic functions to the AutoCADLI project
+// 
+// ============================================================
+// 
+// Purpose: To hold the Math tools required in the AutoCADLI Project
 
 using System;
 

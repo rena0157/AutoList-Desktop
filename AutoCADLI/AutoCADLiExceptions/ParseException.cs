@@ -1,6 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿// AutoCADLI
+// ParseException.cs
+// 
+// ============================================================
+// 
+// Created: 2018-07-24
+// Last Updated: 2018-07-28-3:34 PM
+// By: Adam Renaud
+// 
+// ============================================================
+// 
+// Purpose: Custom Exceptions that are included in the AutoCADLI Project
+
+using System;
 
 namespace AutoCADLI.AutoCADLiExceptions
 {
@@ -8,7 +19,6 @@ namespace AutoCADLI.AutoCADLiExceptions
     {
         public ParseException()
         {
-            
         }
 
         public ParseException(string message)

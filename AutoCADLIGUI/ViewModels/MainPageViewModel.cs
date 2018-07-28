@@ -1,4 +1,17 @@
-﻿using System;
+﻿// AutoCADLIGUI
+// MainPageViewModel.cs
+// 
+// ============================================================
+// 
+// Created: 2018-07-22
+// Last Updated: 2018-07-28-3:34 PM
+// By: Adam Renaud
+// 
+// ============================================================
+// 
+// Purpose:
+
+using System;
 using System.Globalization;
 using System.IO;
 using System.Windows;
@@ -11,6 +24,8 @@ namespace AutoCADLIGUI.ViewModels
 {
     public class MainPageViewModel : ObservableObject
     {
+        //
+        private string _browseText;
         // Property Elements
 
         private bool _extractBlocks;
@@ -21,9 +36,6 @@ namespace AutoCADLIGUI.ViewModels
 
         // Text string that is bound to the text box
         private string _text;
-
-        //
-        private string _browseText;
 
         /// <summary>
         ///     Text from the Text box
@@ -80,7 +92,7 @@ namespace AutoCADLIGUI.ViewModels
         }
 
         /// <summary>
-        /// The string from the BrowseText box
+        ///     The string from the BrowseText box
         /// </summary>
         public string BrowseText
         {
@@ -100,12 +112,12 @@ namespace AutoCADLIGUI.ViewModels
         public ICommand ExtractDataCommand => new DelegateCommand(ExtractData);
 
         /// <summary>
-        /// Opens a file dialog to select a file and then copies that files contents to the text box for extraction
+        ///     Opens a file dialog to select a file and then copies that files contents to the text box for extraction
         /// </summary>
         public ICommand BrowseButtonCommand => new DelegateCommand(GetTextFromFile);
 
         /// <summary>
-        /// <see cref="BrowseButtonCommand"/>
+        ///     <see cref="BrowseButtonCommand" />
         /// </summary>
         private void GetTextFromFile()
         {
@@ -113,7 +125,7 @@ namespace AutoCADLIGUI.ViewModels
             {
                 // Open the file dialog for text files and save the contents 
                 // of the file into the Text box on screen
-                var opnFileDialog = new OpenFileDialog()
+                var opnFileDialog = new OpenFileDialog
                 {
                     CheckPathExists = true,
                     Filter = "Text Files|*.txt"

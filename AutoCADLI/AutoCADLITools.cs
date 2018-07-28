@@ -1,8 +1,15 @@
-﻿// AutoCADLITools.cs
+﻿// AutoCADLI
+// AutoCADLITools.cs
+// 
+// ============================================================
+// 
+// Created: 2018-07-22
+// Last Updated: 2018-07-28-3:34 PM
 // By: Adam Renaud
-// Created: July, 2018
-// Purpose: to house the AutoCADLITools class that holds the functionality 
-// for extracting data from List strings from AutoCAD
+// 
+// ============================================================
+// 
+// Purpose:
 
 using System;
 using System.Collections.Generic;

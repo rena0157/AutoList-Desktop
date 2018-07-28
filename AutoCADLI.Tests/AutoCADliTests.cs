@@ -1,11 +1,18 @@
-﻿// AutoCADliTests.cs
+﻿// AutoCADLI.Tests
+// AutoCADliTests.cs
+// 
+// ============================================================
+// 
+// Created: 2018-07-22
+// Last Updated: 2018-07-28-3:36 PM
 // By: Adam Renaud
-// Created: July, 2018
-// Purpose: To test the AutoCADLI project - Unit Tests
+// 
+// ============================================================
+// 
+// Purpose: AutoCADLI Tests
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -49,7 +56,7 @@ namespace AutoCADLI.Tests
 
 
             // Printing of all the lines in the stringList
-            #if false
+#if false
             foreach (var line in stringList)
             {
                 Debug.WriteLine(line);
@@ -57,7 +64,7 @@ namespace AutoCADLI.Tests
             #endif
 
             // Printing of all of the lengths in the polylines and lines list
-            #if false
+#if false
             foreach (var extractedObj in testExtractionPolylines)
             {
                 Debug.WriteLine(extractedObj);
@@ -82,7 +89,7 @@ namespace AutoCADLI.Tests
             Assert.IsTrue(Math.Abs(MathTools.Convert(totalArea, Conversions.M2Ha) - 1.64679315) < 0.0001,
                 "Total Area: " + totalArea);
 
-            #if false
+#if false
             foreach (var listContents in testHatchExtraction)
             {
                 Debug.WriteLine(listContents);
@@ -99,7 +106,6 @@ namespace AutoCADLI.Tests
 
             // Act
             var testExtraction = AutoCadliTools.ExtractObjects(stringList, ExtractionObject.PolylinesAndLines);
-
         }
 
         [TestMethod]
