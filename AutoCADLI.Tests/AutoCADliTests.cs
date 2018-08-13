@@ -4,12 +4,10 @@
 // ============================================================
 // 
 // Created: 2018-07-22
-// Last Updated: 2018-07-28-3:36 PM
+// Last Updated: 2018-08-13-7:29 PM
 // By: Adam Renaud
 // 
 // ============================================================
-// 
-// Purpose: AutoCADLI Tests
 
 using System;
 using System.Collections.Generic;
@@ -31,10 +29,10 @@ namespace AutoCADLI.Tests
         {
             var returnList = new List<string>();
             // extract the information from the text file.
-            using (var sr = File.OpenText(path))
+            using ( var sr = File.OpenText(path) )
             {
                 string line;
-                while ((line = sr.ReadLine()) != null) returnList.Add(line);
+                while ( ( line = sr.ReadLine() ) != null ) returnList.Add(line);
             }
 
             return returnList;
@@ -50,7 +48,7 @@ namespace AutoCADLI.Tests
 
             // Total length tests
             var totalLength = 0.0;
-            foreach (var obj in testExtractionPolylines) totalLength += obj;
+            foreach ( var obj in testExtractionPolylines ) totalLength += obj;
             // Assertion test for length extraction
             Assert.IsTrue(Math.Abs(totalLength - 693.7963) < 0.0001);
 
@@ -85,7 +83,7 @@ namespace AutoCADLI.Tests
                 ExtractionObject.Hatches);
 
             var totalArea = 0.0;
-            foreach (var area in testHatchExtraction) totalArea += area;
+            foreach ( var area in testHatchExtraction ) totalArea += area;
             Assert.IsTrue(Math.Abs(MathTools.Convert(totalArea, Conversions.M2Ha) - 1.64679315) < 0.0001,
                 "Total Area: " + totalArea);
 
@@ -95,6 +93,17 @@ namespace AutoCADLI.Tests
                 Debug.WriteLine(listContents);
             }
             #endif
+        }
+
+        [TestMethod]
+        public void ArcExtractionTest()
+        {
+            var stringList = ReadLiFile(@"C:\Dev\AutoCADLIGUI\AutoCADLI.Tests\TestFiles\ArcsTest.txt");
+            var arcTestExtraction = AutoCadliTools.ExtractObjects(stringList, ExtractionObject.PolylinesAndLines);
+
+            var totalLength = 0.0;
+            foreach ( var item in arcTestExtraction ) totalLength += item;
+            Assert.IsTrue(Math.Abs(totalLength - 2.318) < 0.001);
         }
 
         [TestMethod]
