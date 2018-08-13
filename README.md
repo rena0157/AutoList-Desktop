@@ -1,8 +1,10 @@
 # AutoCADLI - The AutoCAD List Extraction Tool
 
-This is an application that is used to extract polyline, line and hatch information from a list command's output. The list
-Command generates an output text that is then copied into the Applications text box and then information is extracted. This application
-is still really early in development (Started development in July of 2018).
+This is an application that is used to extract AutoCAD Entity information from a list 
+command's output. The list Command generates an output text that is then copied into the 
+Applications text box and then information is extracted.
+
+![](assets/AutoCADLIsttoolimage.png)
 
 ## Introduction
 
@@ -35,6 +37,7 @@ the LWPOLYLINE.
 
 - LWPOLYLINEs "Polylines": Length property extraction is currently supported
 - LINEs regular lines: Length property extraction is currently supported
+- ARCS: Regular arcs are now good for extraction
 - HATCHs: area property extraction is currently supported
 
 ### Blocks and group lists
