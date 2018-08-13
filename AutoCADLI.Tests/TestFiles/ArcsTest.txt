@@ -1,0 +1,8 @@
+﻿                  ARC       Layer: "0"
+                            Space: Model space
+                   Handle = 274
+            center point, X=    1.000  Y=    1.250  Z=    0.000
+            radius     1.250
+             start angle     37
+               end angle    143
+            length     2.318
