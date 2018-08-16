@@ -84,12 +84,12 @@ namespace AutoCADLIGUI.Models
             // Adding the headers to the CSV file
             stringBuilder.AppendLine("Block Number,Polyline/Line Length, Hatch Area");
 
-            // Appending to the string builder
+            // Appending to the string builder - Note that the area is converted to hectares
             for (var lineIndex = 0; lineIndex < Math.Max(PolyLinesLines.Count, Hatches.Count); ++lineIndex)
                 if (lineIndex >= PolyLinesLines.Count)
                     stringBuilder.AppendLine($"{lineIndex + 1},"
                                              + ","
-                                             + $"{Hatches[lineIndex]}");
+                                             + $"{MathTools.Convert(Hatches[lineIndex], Conversions.M2Ha)}");
                 else if (lineIndex >= Hatches.Count)
                     stringBuilder.AppendLine($"{lineIndex + 1}," +
                                              $"{PolyLinesLines[lineIndex]}," +
@@ -97,7 +97,7 @@ namespace AutoCADLIGUI.Models
                 else
                     stringBuilder.AppendLine($"{lineIndex + 1}," +
                                              $"{PolyLinesLines[lineIndex]}," +
-                                             $"{Hatches[lineIndex]}");
+                                             $"{MathTools.Convert(Hatches[lineIndex], Conversions.M2Ha)}");
 
             // Write to file and handel any writing exceptions
             try
