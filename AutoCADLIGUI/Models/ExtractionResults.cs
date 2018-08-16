@@ -63,7 +63,7 @@ namespace AutoCADLIGUI.Models
         public double TotalArea { get; }
 
         /// <summary>
-        ///     Writes the blocks information to a CSV file
+        ///     Writes the blocks information to a CSV file then opens excel. 
         /// </summary>
         /// <returns>If the write was successful or not</returns>
         public bool OutputBlocksToCsv()
@@ -133,6 +133,7 @@ namespace AutoCADLIGUI.Models
             {
                 MessageBox.Show("Error while trying to open Excel: " + e.Message,
                     "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return true;
             }
 
             return true;
