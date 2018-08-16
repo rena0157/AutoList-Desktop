@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -99,7 +100,7 @@ namespace AutoCADLIGUI.Models
                                              $"{PolyLinesLines[lineIndex]}," +
                                              $"{MathTools.Convert(Hatches[lineIndex], Conversions.M2Ha)}");
 
-            // Write to file and handel any writing exceptions
+            // Write to file and handle any writing exceptions
             try
             {
                 File.WriteAllText(sfDialog.FileName, stringBuilder.ToString());
@@ -115,6 +116,23 @@ namespace AutoCADLIGUI.Models
                 MessageBox.Show("Error while writing file: " + e.Message,
                     "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return false;
+            }
+
+            // Open Excel on the current file.
+            var excelProcess = new Process
+            {
+                StartInfo = {FileName = "excel.exe", Arguments = sfDialog.FileName}
+            };
+
+            // Try to open the excel file
+            try
+            {
+                excelProcess.Start();
+            }
+            catch ( Exception e )
+            {
+                MessageBox.Show("Error while trying to open Excel: " + e.Message,
+                    "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
 
             return true;
