@@ -4,7 +4,7 @@ This is an application that is used to extract AutoCAD Entity information from a
 command's output. The list Command generates an output text that is then copied into the 
 Applications text box and then information is extracted.
 
-![](assets/AutoCADLIsttoolimage.png)
+![](https://github.com/rena0157/AutoCADLIGUI/blob/master/assets/AutoCADLIsttoolimage.PNG)
 
 ## Introduction
 
