@@ -2,9 +2,10 @@
 
 This is an application that is used to extract AutoCAD Entity information from a list 
 command's output. The list Command generates an output text that is then copied into the 
-Applications text box and then information is extracted.
+Applications text box and then information is extracted. Also I now have an online version avalible at
+[AutoList Online](https://adamssite.azurewebsites.net/Home/AutoList). 
 
-![](https://github.com/rena0157/AutoCADLIGUI/blob/master/assets/AutoCADLIsttoolimage.PNG)
+![](https://github.com/rena0157/AutoList-Desktop/blob/master/assets/AutoCADLIsttoolimage.PNG)
 
 ## Introduction
 
@@ -30,19 +31,17 @@ Select objects:
 
 ```
 
-where the above is the output when the user has selected a LWPOLYLINE. CADLI can then use this text to extract the length of
-the LWPOLYLINE. 
+where the above is the output when the user has selected a LWPOLYLINE. AutoList can then use this text to extract the length of
+the LWPOLYLINE.
 
 ## Currently Supported Objects
-
+- MTEXT: Mtext objects for block names
+- TEXT: Text objects for block names
 - LWPOLYLINEs "Polylines": Length property extraction is currently supported
-- LINEs regular lines: Length property extraction is currently supported
-- ARCS: Regular arcs are now good for extraction
 - HATCHs: area property extraction is currently supported
 
-### Blocks and group lists
-Blocks are groups of lines/polylines and hatches that can be read from the text and placed into a CSV file. 
-This is useful if you would like to get both the area and the perimeter of a "Block". I am currently using this in
-residential subdivision design where my polyline is the frontage and the hatch is the area of the block.
-
-## Future Development
+### For Block Extraction
+There is an option for block extraction. A block is something that is used in residential development planning. On a 
+block there is a frontage line represented as either a line or a polyline and the area of the block is represented using a 
+hatch. Also, the blocks name is represented using text. The data must be selected in the order of text, frontage and then
+area, a frontage line is optional. This will then output as a csv file.
