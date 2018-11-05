@@ -56,7 +56,6 @@
                                             <!--Windows Buttons-->
                                             <ColumnDefinition Width="Auto"></ColumnDefinition>
                                         </Grid.ColumnDefinitions>
-
                                     </Grid>
 
                                 </Grid>
