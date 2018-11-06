@@ -3,7 +3,9 @@
                     xmlns:local="clr-namespace:AutoList_Desktop">
     
 
-    <Style TargetType="{x:Type TextBlock}">
-
+    <Style TargetType="{x:Type TextBlock}" x:Key="HeaderText">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0 8"/>
     </Style>
 </ResourceDictionary>

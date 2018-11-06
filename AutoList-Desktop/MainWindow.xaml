@@ -26,6 +26,9 @@
 
                             <!--Main Window Outline-->
                             <Grid>
+                                <!--Opacity Mask for corners on grid-->
+                                <Border x:Name="Container" Background="White" 
+                                        CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}"/>
 
                                 <!--Border and drop shadow-->
                                 <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=10}" Background="White">
@@ -35,8 +38,11 @@
                                 </Border>
 
                                 <!--The main Content-->
-                                
                                 <Grid>
+                                    <Grid.OpacityMask>
+                                        <VisualBrush Visual="{Binding ElementName=Container}"/>
+                                    </Grid.OpacityMask>
+
                                     <Grid.RowDefinitions>
                                         <!--Title Bar-->
                                         <RowDefinition Height="{Binding TitleHeight, FallbackValue=42}"></RowDefinition>
@@ -63,16 +69,47 @@
                                                 Source="Images/Icon/StandardsFileIcon.ico"></Image>
                                         </Button>
 
+                                        <!--Header Title-->
                                         <Viewbox Grid.Column="1">
-                                            <TextBlock
+                                            <TextBlock Style="{StaticResource HeaderText}"
                                                 Text="{Binding RelativeSource={RelativeSource TemplatedParent},
                                                 Path=Title, FallbackValue='AutoList'}"
                                                 
                                                 />
                                         </Viewbox>
-
+                                        <!--Windows Buttons-->
+                                        <StackPanel Grid.Column="2" Orientation="Horizontal">
+                                            <Button Content="_" Style="{StaticResource WindowControlButton}" 
+                                                    Command="{Binding MinimizeCommand}"/>
+                                            <Button Content="[ ]" Style="{StaticResource WindowControlButton}"
+                                                    Command="{Binding MaximizeCommand}"/>
+                                            <Button Content="X" Style="{StaticResource WindowsCloseButton}"
+                                                    Command="{Binding CloseCommand}"/>
+                                        </StackPanel>
                                     </Grid>
+                                    <!--Drop Shadow-->
+                                    <Border Grid.Row="1" Height="6" BorderThickness="0 0.3 0 0">
+                                        <!--Under Line-->
+                                        <Border.BorderBrush>
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                                <GradientStop Color="White" Offset="0.0"/>
+                                                <GradientStop Color="LightGray" Offset="0.5"/>
+                                                <GradientStop Color="White" Offset="1.0"/>
+                                            </LinearGradientBrush>
+                                        </Border.BorderBrush>
 
+                                        <!--Drop Shadow for the title bar-->
+                                        <Border.Background>
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                                <GradientStop Color="LightGray" Offset="0.0"/>
+                                                <GradientStop Color="White" Offset="1.0"/>
+                                            </LinearGradientBrush>
+                                        </Border.Background>
+                                    </Border>
+
+                                    <Border Grid.Row="2" Padding="{Binding ResizeBorderThickness}">
+                                        <ContentPresenter Content="{TemplateBinding Content}"/>
+                                    </Border>
                                 </Grid>
                                 
                             </Grid>
@@ -91,8 +128,6 @@
             CornerRadius="0"
         />
     </WindowChrome.WindowChrome>
-
-
 
     <Grid>
     </Grid>

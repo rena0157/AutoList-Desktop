@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using AutoList_Desktop.WindowsHelpers;
 
 namespace AutoList_Desktop.ViewModels
 {
@@ -79,6 +80,7 @@ namespace AutoList_Desktop.ViewModels
             MaximizeCommand = new RelayCommand((() => CurrentWindowState ^= WindowState.Maximized));
             CloseCommand = new RelayCommand((() => _mainWindow.Close()));
             MenuCommand = new RelayCommand((() => SystemCommands.ShowSystemMenu(_mainWindow, GetMousePosition())));
+            var resizer = new WindowResizer(_mainWindow);
         }
 
         public MainWindowViewModel()
