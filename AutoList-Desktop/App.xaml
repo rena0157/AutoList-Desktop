@@ -5,6 +5,16 @@
              xmlns:localViewModels="clr-namespace:AutoList_Desktop.ViewModels"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <localViewModels:MainWindowViewModel x:Key="MainWindowViewModel"></localViewModels:MainWindowViewModel>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/Buttons.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Styles/Texts.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+            <localViewModels:MainWindowViewModel x:Key="MainWindowViewModel"></localViewModels:MainWindowViewModel>
+        </ResourceDictionary>
     </Application.Resources>
+
+
+
+
 </Application>

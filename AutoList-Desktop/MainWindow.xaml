@@ -8,11 +8,11 @@
         mc:Ignorable="d"
         WindowStyle="None"
         AllowsTransparency="True"
-        Title="MainWindow" Height="450" Width="800"
+        Title="AutoList" Height="450" Width="800"
         MinHeight="150"
         MinWidth="150"
-        DataContext="{StaticResource MainWindowViewModel}"
         Icon="Images/Icon/StandardsFileIcon.ico"
+        d:DataContext="{d:DesignInstance Type=viewModels:MainWindowViewModel, IsDesignTimeCreatable=True}"
         WindowState="{Binding CurrentWindowState, Mode=TwoWay}"
         >
 
@@ -56,6 +56,21 @@
                                             <!--Windows Buttons-->
                                             <ColumnDefinition Width="Auto"></ColumnDefinition>
                                         </Grid.ColumnDefinitions>
+                                        
+                                        <!--Icon of the Main Window-->
+                                        <Button Style="{StaticResource SystemIconButton}" Command="{Binding MenuCommand}">
+                                            <Image 
+                                                Source="Images/Icon/StandardsFileIcon.ico"></Image>
+                                        </Button>
+
+                                        <Viewbox Grid.Column="1">
+                                            <TextBlock
+                                                Text="{Binding RelativeSource={RelativeSource TemplatedParent},
+                                                Path=Title, FallbackValue='AutoList'}"
+                                                
+                                                />
+                                        </Viewbox>
+
                                     </Grid>
 
                                 </Grid>

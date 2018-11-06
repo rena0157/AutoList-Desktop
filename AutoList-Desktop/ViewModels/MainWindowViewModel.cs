@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Input;
 
 namespace AutoList_Desktop.ViewModels
 {
@@ -20,6 +22,7 @@ namespace AutoList_Desktop.ViewModels
         private CornerRadius _windowCornerRadius;
         private WindowState _windowState;
         private int _titleHeight;
+        private Window _mainWindow;
 
         #endregion
 
@@ -32,19 +35,55 @@ namespace AutoList_Desktop.ViewModels
 
         #endregion
 
+        #region Commands
+
+        /// <summary>
+        /// Command to minimize the window
+        /// </summary>
+        public ICommand MinimizeCommand { get; set; }
+
+        /// <summary>
+        /// Maximizes the Window
+        /// </summary>
+        public ICommand MaximizeCommand { get; set; }
+
+        /// <summary>
+        /// Closes the Window
+        /// </summary>
+        public ICommand CloseCommand { get; set; }
+
+        /// <summary>
+        /// The command to show the system menu window
+        /// </summary>
+        public ICommand MenuCommand { get; set; }
+
+        #endregion
+
 
         #region Constructor
 
         /// <summary>
         /// Sets all properties to the default values
         /// </summary>
-        public MainWindowViewModel()
+        public MainWindowViewModel(Window window)
         {
             _resizeBorderThickness = new Thickness(ResizeBorderThicknessDefault);
             _outerMarginThickness = new Thickness(OuterMarginThicknessDefault);
             _windowCornerRadius = new CornerRadius(WindowCornerRadiusDefault);
             _windowState = WindowState.Normal;
             _titleHeight = TitleHeightDefault;
+            _mainWindow = window;
+
+            // Create Command
+            MinimizeCommand = new RelayCommand(() => CurrentWindowState = WindowState.Minimized);
+            MaximizeCommand = new RelayCommand((() => CurrentWindowState ^= WindowState.Maximized));
+            CloseCommand = new RelayCommand((() => _mainWindow.Close()));
+            MenuCommand = new RelayCommand((() => SystemCommands.ShowSystemMenu(_mainWindow, GetMousePosition())));
+        }
+
+        public MainWindowViewModel()
+        {
+            
         }
 
         #endregion
@@ -133,6 +172,20 @@ namespace AutoList_Desktop.ViewModels
                 _titleHeight = value;
                 RaisePropertyChanged();
             }
+        }
+
+        #endregion
+
+        #region Private Helpers
+
+        /// <summary>
+        /// Gets the Current Mouse Position on the screen
+        /// </summary>
+        /// <returns></returns>
+        private Point GetMousePosition()
+        {
+            var position = Mouse.GetPosition(_mainWindow);
+            return new Point(position.X + _mainWindow.Left, position.Y + _mainWindow.Top);
         }
 
         #endregion

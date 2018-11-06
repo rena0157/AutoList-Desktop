@@ -25,6 +25,7 @@ namespace AutoList_Desktop
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainWindowViewModel(this);
         }
     }
 }
